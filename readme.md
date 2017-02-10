@@ -11,3 +11,6 @@ npm install -g gulpjs/gulp.git#4.0
 # build and run the project
 gulp serve
 
+# If not working
+npm install -g gulp-sourcemaps gulp-insert run-sequence lazypipe
+
