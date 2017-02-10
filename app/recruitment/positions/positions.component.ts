@@ -6,12 +6,12 @@ import {
     ViewEncapsulation }            from "@angular/core";
 
 @Component({
-    selector: 'login',
-    templateUrl: 'app/auth/login/login.html',
-    styleUrls: [ 'dist/app/auth/login/login.css' ],
+    selector: 'positions',
+    templateUrl: 'app/recruitment/positions/positions.html',
+    styleUrls: [ 'dist/app/recruitment/positions/positions.css' ],
     encapsulation: ViewEncapsulation.None
 })
-export class LoginComponent implements OnInit {
+export class PositionsComponent implements OnInit {
     constructor() { }
 
     public ngOnInit(): void { }

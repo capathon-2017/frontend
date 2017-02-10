@@ -3,8 +3,7 @@
 import {
     Component,
     OnInit,
-    ViewEncapsulation } from '@angular/core';
-
+    ViewEncapsulation }                 from '@angular/core';
 
 @Component({
     selector: 'recruitment-portal',
@@ -16,7 +15,5 @@ import {
 export class AppComponent implements OnInit {
     constructor() { }
 
-    ngOnInit() {
-
-    }
+    ngOnInit() { }
 }

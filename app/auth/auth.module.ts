@@ -2,7 +2,7 @@
 
 import { NgModule }                     from '@angular/core';
 
-import { appRoutingProviders, routing } from './recruitment.routing';
+import { appRoutingProviders, routing } from './auth.routing';
 
 import {
     DropdownModule,
@@ -12,13 +12,11 @@ import {
 import { BrowserModule }                from '@angular/platform-browser'
 import { FormsModule }                  from '@angular/forms';
 
-import { PositionsComponent }            from './positions/positions.component';
-import { SkillsComponent }              from './skills/skills.component';
+import { LoginComponent }            from './login/login.component';
 
 @NgModule({
     declarations: [
-        PositionsComponent,
-        SkillsComponent
+        LoginComponent
     ],
     imports: [
         BrowserModule,
@@ -32,4 +30,4 @@ import { SkillsComponent }              from './skills/skills.component';
         appRoutingProviders
     ]
 })
-export class RecruitmentModule { }
+export class AuthModule { }
