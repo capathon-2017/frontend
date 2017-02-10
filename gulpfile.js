@@ -7,8 +7,15 @@ const sourcemaps = require('gulp-sourcemaps');
 const typescript = require('gulp-typescript');
 const tsconfig = require('./tsconfig.json');
 const sass = require('gulp-sass');
+const zip = require('gulp-zip');
 
 const paths = {
+    app: {
+        html: 'app/**/*.html',
+        scss: 'app/**/*.scss',
+        ts: 'app/**/*.ts',
+        src: 'app'
+    },
     dist: {
         app: 'dist/app',
         css: 'dist/app/**/*.css',
@@ -16,11 +23,10 @@ const paths = {
         js: 'dist/app/**/*.js*',
         src: 'dist'
     },
-    app: {
-        html: 'app/**/*.html',
-        scss: 'app/**/*.scss',
-        ts: 'app/**/*.ts',
-        src: 'app'
+    ignore: {
+        app: {
+            styles: '!app/styles{,/**}'
+        }
     }
 };
 
@@ -47,7 +53,7 @@ gulp.task('copy', gulp.parallel('copy:html'));
 
 /* transpile */
 gulp.task('transpile:scss', () => {
-    return gulp.src(paths.app.scss)
+    return gulp.src([paths.app.scss, paths.ignore.app.styles])
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(paths.dist.app));
 });
